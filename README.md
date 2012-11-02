@@ -46,7 +46,7 @@ appLogger.log("This line is 'info' level and color is 'default' and appender nam
 sysLogger = debugUtil.getColorLogger("Sys","warn","magenta");
 sysLogger.log("This line is 'warn' level and color is 'magenta' and appender name is 'Sys'");
 ```
-![Screen Shot](./ScreenShot.png)
+![Screen Shot](https://raw.github.com/georgeOsdDev/debugUtil/master/ScreenShot.png)
 
 ### loggingWrap(context,function)
 ```javascript
