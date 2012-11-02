@@ -5,7 +5,7 @@ Some debug utility for both server-side and client-side javascript.
 ### Server Side
 
 ```bash
-npm install --save debugUtil
+npm install --save debug-util
 ```
 and
 ```javascript
