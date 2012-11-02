@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="../lib/debugUtil.js"></script>
+</head>
+<body>
+  <h3>Test</h3>
+  <script type="text/javascript">
+    console.log("- Test of debugUtil.isBrowser()-");
+    console.log("debugUtil.isBrowser() == true result: ", debugUtil.isBrowser());
+    console.log("");
+
+    console.log("- Test of debugUtil.getColorLogger() -");
+    //Browser console display only default color.
+    //Get Default Logger
+    defaultLogger = debugUtil.getColorLogger();
+    defaultLogger.log("This line is 'debug' level and color is 'default'");
+    defaultLogger.fatal("This line is 'fatal' level and color is 'default'");
+    defaultLogger.error("This line is 'error' level and color is 'default'");
+    defaultLogger.warn("This line is 'warn' level and color is 'default'");
+    defaultLogger.info("This line is 'info' level and color is 'default'");
+    defaultLogger.debug("This line is 'debug' level and color is 'default'");
+    defaultLogger.trace("This line is 'trace' level and color is 'default'");
+
+    //Set Name and Level
+    appLogger = debugUtil.getColorLogger("App","info");
+    appLogger.log("This line is 'info' level and color is 'default' and appender name is 'App'");
+
+    //Set Name, Level and Color
+    sysLogger = debugUtil.getColorLogger("Sys","warn","magenta");
+    sysLogger.log("This line is 'warn' level and color is 'magenta' and appender name is 'Sys'");
+    console.log("");
+
+    console.log("- Test of debugUtil.loggingWrap() -");
+    //Named function
+    function sum(a,b){
+      return a+b;
+    }
+    sum = debugUtil.loggingWrap(this,sum);
+    sum(1,2);
+
+    //Anonymous function
+    double = function(a){
+      return a*2;
+    }
+    double = debugUtil.loggingWrap(this,double);
+    double(1,2);
+
+    //Anonymous function with name
+    foo = function inclement(a){
+      return a+1;
+    }
+    foo = debugUtil.loggingWrap(this,foo);
+    foo(1,2);
+    console.log("");
+
+    console.log("- Test of debugUtil.debugToScreen() -");
+    debugUtil.debugToScreen("debugToScreen");
+    debugUtil.debugToScreen(sum(3,4)); //result
+    debugUtil.debugToScreen(appLogger);//objct
+  </script>
+</body>
+</html>

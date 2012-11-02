@@ -1,0 +1,38 @@
+{
+	"name": "debugUtil",
+	"version": "0.1.0",
+	"description": "Some debug utility for both server-side and client-side javascript.",
+	"homepage": "https://github.com/georgeosddev/debugUtil",
+	"keywords": [
+		"debug",
+		"logger"
+	],
+	"author": "Takeharu.Oshida(http://georgeosddev.github.com)",
+	"maintainers": [
+		"Takeharu.Oshida(http://georgeosddev.github.com)"
+	],
+	"contributors": [
+		"Takeharu.Oshida(http://georgeosddev.github.com)"
+	],
+	"bugs": {
+		"url": "https://github.com/georgeosddev/debugUtil/issues"
+	},
+	"repository" : {
+		"type": "git",
+		"url": "http://github.com/georgeosddev/debugUtil.git"
+	},
+	"engines" : {
+		"node": ">=0.4.0"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"coffee-script": "1.3.x",
+		"coffeelint": ">=0.5.2",
+		"uglify-js": ">=0.8.7"
+	},
+	"main": "./lib/debugUtil.js",
+	"scripts": {
+		"test": "node ./test/test.js"
+	}
+}
