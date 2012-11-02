@@ -9,7 +9,7 @@ npm install --save debug-util
 ```
 and
 ```javascript
-var debugUtil = require('debugUtil');
+var debugUtil = require('debug-util');
 ```
 ### Client Side
 

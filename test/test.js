@@ -1,5 +1,5 @@
 var debugUtil = require("../lib/debugUtil"),
-// var debugUtil = require("debugUtil"),
+// var debugUtil = require("debug-util"),
     assert    = require("assert");
 
 console.log("- Test of debugUtil.isBrowser() -");
