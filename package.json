@@ -1,6 +1,6 @@
 {
 	"name": "debug-util",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Some debug utility for both server-side and client-side javascript.",
 	"homepage": "https://github.com/georgeosddev/debugUtil",
 	"keywords": [
